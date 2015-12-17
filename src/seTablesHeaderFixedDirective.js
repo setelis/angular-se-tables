@@ -17,7 +17,7 @@ angular.module("seTables.headerfixed", []).directive("seTablesHeaderFixed", func
 		restrict: "A",
 		link: function(scope, element) {
 			var $$window = $($window);
-			var headTop = element.offset().top;
+			var headTop;
 
 			var handler = function() {
 				function iterateOverElements(func) {
@@ -58,8 +58,14 @@ angular.module("seTables.headerfixed", []).directive("seTablesHeaderFixed", func
 				}
 
 				function shouldBeFixed() {
+					function ensureHeaderTop() {
+						if (angular.isUndefined(headTop)) {
+							headTop = element.offset().top;
+						}
+						return headTop;
+					}
 					var scrollTop = $$window.scrollTop();
-					return scrollTop > headTop;
+					return scrollTop > ensureHeaderTop();
 				}
 				function isFixed() {
 					return element.hasClass("se-tables-header-fixed") && element.hasClass("se-tables-header-shadow");
