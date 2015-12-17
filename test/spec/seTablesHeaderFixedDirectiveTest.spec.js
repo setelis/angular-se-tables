@@ -1,7 +1,7 @@
-describe("SeNotifications", function () {
+describe("seTablesHeaderFixed", function () {
 	"use strict";
 
-	beforeEach(module("seNotifications.service", function() {
+	beforeEach(module("seTables.headerfixed", function() {
 	}));
 	beforeEach(inject(function () {
 	}));
