@@ -1,0 +1,38 @@
+{
+  "name": "angular-se-tables",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.4.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.3",
+    "angular-scenario": "~1.4.3"
+  },
+  "homepage": "https://github.com/setelis/angular-se-tables",
+  "authors": [
+    "Plamen Tanov <ptanov@setelis.com>"
+  ],
+  "description": "Table helpers used in Setelis. Currently only fixed table header.",
+  "main": [
+     "src/seTablesModule.js",
+     "src/seTablesHeaderFixedDirective.js",
+     "css/seTables.css"
+  ],
+
+  "keywords": [
+    "angular",
+    "table",
+    "header",
+    "fixed"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo",
+    "flow"
+  ]
+}
